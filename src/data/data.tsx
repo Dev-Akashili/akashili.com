@@ -1,0 +1,31 @@
+import { FaFileAlt, FaGithub, FaLinkedin } from "react-icons/fa";
+
+export const data = [
+  {
+    name: "Resume",
+    style: { textDecoration: "none" },
+    lefIcon: <FaFileAlt />,
+    variant: "outline",
+    colorScheme: "whatsapp",
+    link: "https://drive.google.com/file/d/19iGzqmc1_TUFyJqRcQkH7CtuVU_Xl1at/view",
+    hover: { bg: "#179948", color: "white" },
+  },
+  {
+    name: "GitHub",
+    style: { textDecoration: "none" },
+    lefIcon: <FaGithub />,
+    variant: "outline",
+    colorScheme: "black",
+    link: "https://github.com/Dev-Akashili",
+    hover: { bg: "black", color: "white" },
+  },
+  {
+    name: "LinkedIn",
+    style: { textDecoration: "none" },
+    lefIcon: <FaLinkedin />,
+    variant: "outline",
+    colorScheme: "messenger",
+    link: "https://www.linkedin.com/in/akashili/",
+    hover: { bg: "#0063D1", color: "white" },
+  },
+];
