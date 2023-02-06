@@ -29,3 +29,11 @@ export const data = [
     hover: { bg: "#0063D1", color: "white" },
   },
 ];
+
+export const page = {
+  heading: ["6xl", "7xl", "8xl"],
+  subHeading: ["2xl", "3xl", "4xl"],
+  layoutPadding: ["0px", "10px", "25px"],
+  layoutMargin: ["auto", "0px 20px", "0px 50px"],
+  buttonMargin: ["20px 5px", "12px 5px", "0px"],
+};
