@@ -1,10 +1,37 @@
-import { Box, Button, Flex, Text, Link } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Text,
+  Link,
+  useColorMode,
+  IconButton
+} from "@chakra-ui/react";
 import { data, page } from "../data";
+import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 
 export const Home = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <Flex alignItems="center" justifyContent="center" height="100vh">
       <Box>
+        <Flex
+          justifyContent="flex-end"
+          p={page.layoutPadding}
+          m={page.layoutMargin}
+        >
+          <IconButton
+            aria-label="Toggle dark mode"
+            icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
+            onClick={toggleColorMode}
+            variant="ghost"
+            position="absolute"
+            top={page.layoutPadding}
+            right={page.layoutPadding}
+            fontSize="3xl"
+          />
+        </Flex>
         <Text fontSize={page.heading}>Emeka Akashili</Text>
         <Text fontSize={page.subHeading} align="center" color="gray.500">
           Fullstack Software Engineer
