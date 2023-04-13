@@ -14,7 +14,7 @@ export const Home = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Flex alignItems="center" justifyContent="center" height="100vh">
+    <Flex alignItems="center" justifyContent="center" height={{ base: "85vh", md: "95vh", lg: "95vh" }}>
       <Box>
         <Flex
           justifyContent="flex-end"
