@@ -7,7 +7,7 @@ export const data = [
     lefIcon: <FaFileAlt />,
     variant: "outline",
     colorScheme: "whatsapp",
-    link: "https://drive.google.com/file/d/1hXPjJWqEt4CeqDtgJDX-ghyv_1M6xGkq/view",
+    link: "https://drive.google.com/file/d/1uijqzRrmYy2Acd6jNqLBkEnetOFVoN-K/view",
     hover: { bg: "#179948", color: "white" },
   },
   {
