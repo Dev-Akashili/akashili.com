@@ -5,7 +5,7 @@ export const navlinks: { name: string; to: string }[] = [
     name: "RESUME",
     to: "https://drive.google.com/file/d/1jdMOFJ-EhDveKA8bXspMQ8qETs1xv6YZ/view"
   },
-  { name: "PORTFOLIO", to: "/portfolio" },
+  { name: "PROJECTS", to: "/projects" },
   { name: "CONTACT ME", to: "/contact" }
 ];
 

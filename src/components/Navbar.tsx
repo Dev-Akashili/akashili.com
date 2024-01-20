@@ -1,4 +1,4 @@
-import { Flex, Stack, Text, Link } from "@chakra-ui/react";
+import { Flex, Stack, Text, Link, Box } from "@chakra-ui/react";
 import { navlinks } from "../data/data";
 
 interface NavLinkProps {
@@ -9,10 +9,9 @@ interface NavLinkProps {
 const NavLink = ({ name, to }: NavLinkProps) => {
   return (
     <Link
-      as="button"
+      as="a"
       fontSize="xs"
       fontWeight="bold"
-      transition="border-bottom 0.2s ease"
       _hover={{ borderBottom: "2px solid orange", color: "orange" }}
       href={to}
       target={name === "RESUME" ? "_blank" : "_self"}
@@ -25,17 +24,21 @@ const NavLink = ({ name, to }: NavLinkProps) => {
 const Navbar = () => {
   return (
     <Flex minH="100px" alignItems="center">
-      <Text
+      <Link
         ml="50px"
         fontSize="md"
         fontWeight="extrabold"
         fontFamily="sans-serif"
+        _hover={{ textDecoration: "none" }}
+        href="/"
       >
         Akashili.com
-      </Text>
+      </Link>
       <Stack direction="row" gap={3} ml="100px">
         {navlinks.map((navlink, index) => (
-          <NavLink name={navlink.name} to={navlink.to} key={index} />
+          <Box key={index}>
+            <NavLink name={navlink.name} to={navlink.to} />
+          </Box>
         ))}
       </Stack>
     </Flex>
