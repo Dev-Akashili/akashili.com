@@ -1,4 +1,5 @@
-import { Flex, Stack, Text, Link, Box } from "@chakra-ui/react";
+import { Flex, Stack, Link, Box, useColorMode } from "@chakra-ui/react";
+import { Moon, Sun } from "lucide-react";
 import { navlinks } from "../data/data";
 
 interface NavLinkProps {
@@ -22,6 +23,8 @@ const NavLink = ({ name, to }: NavLinkProps) => {
 };
 
 const Navbar = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <Flex minH="100px" alignItems="center">
       <Link
@@ -41,6 +44,14 @@ const Navbar = () => {
           </Box>
         ))}
       </Stack>
+      <Box
+        ml="50px"
+        cursor="pointer"
+        _hover={{ color: "orange" }}
+        onClick={toggleColorMode}
+      >
+        {colorMode === "light" ? <Moon height="18px" /> : <Sun />}
+      </Box>
     </Flex>
   );
 };
