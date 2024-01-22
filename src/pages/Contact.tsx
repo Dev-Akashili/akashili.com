@@ -63,7 +63,7 @@ const Contact = () => {
   return (
     <Stack
       direction={{ base: "column-reverse", md: "row", lg: "row" }}
-      p={{ base: "20px 50px", md: "20px 80px", lg: "20px 200px" }}
+      p={{ base: "20px 35px", md: "20px 80px", lg: "20px 200px" }}
       gap={{ base: 0, md: 5, lg: 0 }}
     >
       <Box
