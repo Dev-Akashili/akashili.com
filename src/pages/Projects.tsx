@@ -5,7 +5,7 @@ import { projects } from "../data/data";
 const Projects = () => {
   return (
     <Flex
-      p={{ base: "20px 50px", lg: "20px 150px" }}
+      p={{ base: "20px 25px", lg: "20px 150px" }}
       flexWrap="wrap"
       gap="50px"
       justifyContent={{
