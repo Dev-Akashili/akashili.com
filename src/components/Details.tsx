@@ -3,22 +3,37 @@ import { contactIcons } from "../data/data";
 
 const Details = () => {
   return (
-    <Stack direction="row" p="20px 200px">
-      <Stack w="50%" gap={6}>
-        <Box>
-          <Text fontFamily="sans-serif" fontSize="5xl" fontWeight="bold">
+    <Stack
+      direction={{ sm: "column-reverse", md: "row", lg: "row" }}
+      p={{ sm: "20px 50px", lg: "20px 200px" }}
+      gap={{ sm: 6 }}
+    >
+      <Stack w="100%" gap={{ sm: 3, md: 6, lg: 6 }}>
+        <Stack
+          direction={{ sm: "row", md: "column", lg: "column" }}
+          justifyContent={{ sm: "center" }}
+        >
+          <Text
+            fontFamily="sans-serif"
+            fontSize={{ sm: "3xl", md: "4xl", lg: "5xl" }}
+            fontWeight="bold"
+          >
             Hi,
           </Text>
-          <Text fontFamily="sans-serif" fontSize="5xl" fontWeight="bold">
+          <Text
+            fontFamily="sans-serif"
+            fontSize={{ sm: "3xl", md: "4xl", lg: "5xl" }}
+            fontWeight="bold"
+          >
             I'm Emeka Akashili
           </Text>
-        </Box>
+        </Stack>
         <Text
           color="gray"
           fontFamily="sans-serif"
           fontWeight="thin"
           lineHeight="1.8"
-          fontSize="xl"
+          fontSize={{ sm: "md", md: "lg", lg: "xl" }}
           mb="50px"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -28,7 +43,11 @@ const Details = () => {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur.
         </Text>
-        <Stack direction="row" gap={5}>
+        <Stack
+          direction="row"
+          gap={5}
+          justifyContent={{ sm: "center", md: "left", lg: "left" }}
+        >
           {contactIcons.map((icon, index) => (
             <Link
               key={index}
@@ -41,11 +60,11 @@ const Details = () => {
           ))}
         </Stack>
       </Stack>
-      <Flex alignItems="center" w="50%">
+      <Flex alignItems="center" w="100%">
         <Image
-          w="280px"
-          h="280px"
-          ml="auto"
+          w={{ sm: "220px", md: "220px", lg: "280px" }}
+          h={{ sm: "220px", md: "220px", lg: "280px" }}
+          m={{ sm: "0 auto", lg: "0 0 0 auto" }}
           src="././avatar.png"
           alt="Avatar"
         />

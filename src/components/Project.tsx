@@ -2,7 +2,6 @@ import {
   Box,
   Collapse,
   Flex,
-  HStack,
   Link,
   Stack,
   Tag,
@@ -33,7 +32,11 @@ const Project = ({ name, description, link, stack }: ProjectProps) => {
       }}
     >
       <Box>
-        <Text fontFamily="sans-serif" fontSize="2xl" fontWeight="bold">
+        <Text
+          fontFamily="sans-serif"
+          fontSize={{ sm: "xl", md: "2xl", lg: "2xl" }}
+          fontWeight="bold"
+        >
           {name}
         </Text>
         <Box minH="300px" minW="100px" border="2px solid"></Box>
@@ -42,14 +45,23 @@ const Project = ({ name, description, link, stack }: ProjectProps) => {
         <Box _hover={{ color: "orange" }}>
           <Link fontWeight="bold" href={link}>
             <Flex>
-              <Text textDecoration="underline">View in Github</Text>
+              <Text
+                fontSize={{ sm: "sm", md: "md" }}
+                textDecoration="underline"
+              >
+                View in Github
+              </Text>
               <ExternalLink height="18px" />
             </Flex>
           </Link>
         </Box>
       </Collapse>
       <Box>
-        <Text fontFamily="sans-serif" fontSize="xl" fontWeight="bold">
+        <Text
+          fontFamily="sans-serif"
+          fontSize={{ sm: "lg", md: "xl", lg: "xl" }}
+          fontWeight="bold"
+        >
           Description
         </Text>
         <Text
@@ -57,20 +69,24 @@ const Project = ({ name, description, link, stack }: ProjectProps) => {
           fontFamily="sans-serif"
           fontWeight="thin"
           lineHeight="1.8"
-          fontSize="md"
+          fontSize={{ sm: "sm", md: "md", lg: "md" }}
         >
           {description}
         </Text>
       </Box>
       <Box>
-        <Text fontFamily="sans-serif" fontSize="lg" fontWeight="bold">
+        <Text
+          fontFamily="sans-serif"
+          fontSize={{ sm: "md", md: "lg", lg: "lg" }}
+          fontWeight="bold"
+        >
           Tech Stack
         </Text>
-        <HStack spacing={4}>
+        <Flex flexWrap="wrap" gap={3}>
           {stack.map((item, index) => (
             <Tag
               key={index}
-              size="lg"
+              size={{ sm: "md", md: "lg", lg: "lg" }}
               variant="outline"
               colorScheme="orange"
               borderRadius={0}
@@ -78,7 +94,7 @@ const Project = ({ name, description, link, stack }: ProjectProps) => {
               <TagLabel>{item}</TagLabel>
             </Tag>
           ))}
-        </HStack>
+        </Flex>
       </Box>
     </Stack>
   );

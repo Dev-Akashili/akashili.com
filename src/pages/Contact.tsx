@@ -61,40 +61,52 @@ const Contact = () => {
   };
 
   return (
-    <Stack direction="row" p="20px 200px">
-      <Box w="50%" mt={5}>
+    <Stack
+      direction={{ sm: "column-reverse", md: "row", lg: "row" }}
+      p={{ sm: "20px 50px", md: "20px 80px", lg: "20px 200px" }}
+      gap={{ sm: 0, md: 5, lg: 0 }}
+    >
+      <Box
+        w={{ sm: "100%", md: "75%", lg: "50%" }}
+        mt={5}
+        textAlign={{ sm: "center" }}
+      >
         <form ref={form} onSubmit={handleSubmit}>
-          <Stack w="80%" gap={3}>
+          <Stack w={{ sm: "100%", lg: "80%" }} gap={{ sm: 2, lg: 3 }}>
             <FormControl isRequired>
-              <FormLabel>Name</FormLabel>
+              <FormLabel fontSize={{ sm: "sm", lg: "md" }}>Name</FormLabel>
               <Input
                 borderBottom="1px solid"
                 variant="flushed"
                 name="name"
                 type="text"
+                h={{ sm: "30px" }}
               />
             </FormControl>
             <FormControl isRequired>
-              <FormLabel>Email</FormLabel>
+              <FormLabel fontSize={{ sm: "sm", lg: "md" }}>Email</FormLabel>
               <Input
                 borderBottom="1px solid"
                 variant="flushed"
                 name="email"
                 type="text"
+                h={{ sm: "30px" }}
               />
             </FormControl>
             <FormControl isRequired>
-              <FormLabel>Message</FormLabel>
+              <FormLabel fontSize={{ sm: "sm", lg: "md" }}>Message</FormLabel>
               <Textarea
                 borderBottom="1px solid"
                 variant="flushed"
                 name="message"
+                rows={3}
               />
             </FormControl>
             <Button
               isLoading={isSubmitting}
               backgroundColor="black"
               color="white"
+              fontSize={{ sm: "sm", lg: "md" }}
               borderRadius={0}
               _hover={{
                 backgroundColor: isSubmitting ? "black" : "orange",
@@ -107,8 +119,12 @@ const Contact = () => {
           </Stack>
         </form>
       </Box>
-      <Stack w="50%" gap={6}>
-        <Text fontFamily="sans-serif" fontSize="5xl" fontWeight="bold">
+      <Stack w={{ sm: "100%", md: "75%", lg: "50%" }} gap={6}>
+        <Text
+          fontFamily="sans-serif"
+          fontSize={{ sm: "3xl", md: "4xl", lg: "5xl" }}
+          fontWeight="bold"
+        >
           Contact Me
         </Text>
         <Text
@@ -116,7 +132,7 @@ const Contact = () => {
           fontFamily="sans-serif"
           fontWeight="thin"
           lineHeight="1.8"
-          fontSize="xl"
+          fontSize={{ sm: "md", md: "lg", lg: "xl" }}
           mb="50px"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

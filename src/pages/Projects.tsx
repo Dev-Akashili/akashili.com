@@ -5,13 +5,17 @@ import { projects } from "../data/data";
 const Projects = () => {
   return (
     <Flex
-      p="20px 150px"
+      p={{ sm: "20px 50px", lg: "20px 150px" }}
       flexWrap="wrap"
       gap="50px"
-      justifyContent="space-between"
+      justifyContent={{
+        sm: "space-between",
+        md: "center",
+        lg: "space-between"
+      }}
     >
       {projects.map((project, index) => (
-        <Box key={index} w="45%">
+        <Box key={index} w={{ sm: "100%", md: "70%", lg: "45%" }}>
           <Project
             name={project.name}
             description={project.description}
