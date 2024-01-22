@@ -1,28 +1,28 @@
-import { Box, Flex, Image, Link, Stack, Text } from "@chakra-ui/react";
+import { Flex, Image, Link, Stack, Text } from "@chakra-ui/react";
 import { contactIcons } from "../data/data";
 
 const Details = () => {
   return (
     <Stack
-      direction={{ sm: "column-reverse", md: "row", lg: "row" }}
-      p={{ sm: "20px 50px", lg: "20px 200px" }}
-      gap={{ sm: 6 }}
+      direction={{ base: "column-reverse", md: "row", lg: "row" }}
+      p={{ base: "20px 50px", lg: "20px 200px" }}
+      gap={{ base: 6 }}
     >
-      <Stack w="100%" gap={{ sm: 3, md: 6, lg: 6 }}>
+      <Stack w="100%" gap={{ base: 3, md: 6, lg: 6 }}>
         <Stack
-          direction={{ sm: "row", md: "column", lg: "column" }}
-          justifyContent={{ sm: "center" }}
+          direction={{ base: "row", md: "column", lg: "column" }}
+          justifyContent={{ base: "center" }}
         >
           <Text
             fontFamily="sans-serif"
-            fontSize={{ sm: "3xl", md: "4xl", lg: "5xl" }}
+            fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
             fontWeight="bold"
           >
             Hi,
           </Text>
           <Text
             fontFamily="sans-serif"
-            fontSize={{ sm: "3xl", md: "4xl", lg: "5xl" }}
+            fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
             fontWeight="bold"
           >
             I'm Emeka Akashili
@@ -33,7 +33,7 @@ const Details = () => {
           fontFamily="sans-serif"
           fontWeight="thin"
           lineHeight="1.8"
-          fontSize={{ sm: "md", md: "lg", lg: "xl" }}
+          fontSize={{ base: "md", md: "lg", lg: "xl" }}
           mb="50px"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -46,7 +46,7 @@ const Details = () => {
         <Stack
           direction="row"
           gap={5}
-          justifyContent={{ sm: "center", md: "left", lg: "left" }}
+          justifyContent={{ base: "center", md: "left", lg: "left" }}
         >
           {contactIcons.map((icon, index) => (
             <Link
@@ -62,9 +62,9 @@ const Details = () => {
       </Stack>
       <Flex alignItems="center" w="100%">
         <Image
-          w={{ sm: "220px", md: "220px", lg: "280px" }}
-          h={{ sm: "220px", md: "220px", lg: "280px" }}
-          m={{ sm: "0 auto", lg: "0 0 0 auto" }}
+          w={{ base: "220px", md: "220px", lg: "280px" }}
+          h={{ base: "220px", md: "220px", lg: "280px" }}
+          m={{ base: "0 auto", lg: "0 0 0 auto" }}
           src="././avatar.png"
           alt="Avatar"
         />

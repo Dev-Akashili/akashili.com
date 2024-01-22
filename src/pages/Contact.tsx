@@ -62,39 +62,39 @@ const Contact = () => {
 
   return (
     <Stack
-      direction={{ sm: "column-reverse", md: "row", lg: "row" }}
-      p={{ sm: "20px 50px", md: "20px 80px", lg: "20px 200px" }}
-      gap={{ sm: 0, md: 5, lg: 0 }}
+      direction={{ base: "column-reverse", md: "row", lg: "row" }}
+      p={{ base: "20px 50px", md: "20px 80px", lg: "20px 200px" }}
+      gap={{ base: 0, md: 5, lg: 0 }}
     >
       <Box
-        w={{ sm: "100%", md: "75%", lg: "50%" }}
+        w={{ base: "100%", md: "75%", lg: "50%" }}
         mt={5}
-        textAlign={{ sm: "center" }}
+        textAlign={{ base: "center" }}
       >
         <form ref={form} onSubmit={handleSubmit}>
-          <Stack w={{ sm: "100%", lg: "80%" }} gap={{ sm: 2, lg: 3 }}>
+          <Stack w={{ base: "100%", lg: "80%" }} gap={{ base: 2, lg: 3 }}>
             <FormControl isRequired>
-              <FormLabel fontSize={{ sm: "sm", lg: "md" }}>Name</FormLabel>
+              <FormLabel fontSize={{ base: "sm", lg: "md" }}>Name</FormLabel>
               <Input
                 borderBottom="1px solid"
                 variant="flushed"
                 name="name"
                 type="text"
-                h={{ sm: "30px" }}
+                h={{ base: "30px" }}
               />
             </FormControl>
             <FormControl isRequired>
-              <FormLabel fontSize={{ sm: "sm", lg: "md" }}>Email</FormLabel>
+              <FormLabel fontSize={{ base: "sm", lg: "md" }}>Email</FormLabel>
               <Input
                 borderBottom="1px solid"
                 variant="flushed"
                 name="email"
                 type="text"
-                h={{ sm: "30px" }}
+                h={{ base: "30px" }}
               />
             </FormControl>
             <FormControl isRequired>
-              <FormLabel fontSize={{ sm: "sm", lg: "md" }}>Message</FormLabel>
+              <FormLabel fontSize={{ base: "sm", lg: "md" }}>Message</FormLabel>
               <Textarea
                 borderBottom="1px solid"
                 variant="flushed"
@@ -106,7 +106,7 @@ const Contact = () => {
               isLoading={isSubmitting}
               backgroundColor="black"
               color="white"
-              fontSize={{ sm: "sm", lg: "md" }}
+              fontSize={{ base: "sm", lg: "md" }}
               borderRadius={0}
               _hover={{
                 backgroundColor: isSubmitting ? "black" : "orange",
@@ -119,10 +119,10 @@ const Contact = () => {
           </Stack>
         </form>
       </Box>
-      <Stack w={{ sm: "100%", md: "75%", lg: "50%" }} gap={6}>
+      <Stack w={{ base: "100%", md: "75%", lg: "50%" }} gap={6}>
         <Text
           fontFamily="sans-serif"
-          fontSize={{ sm: "3xl", md: "4xl", lg: "5xl" }}
+          fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
           fontWeight="bold"
         >
           Contact Me
@@ -132,7 +132,7 @@ const Contact = () => {
           fontFamily="sans-serif"
           fontWeight="thin"
           lineHeight="1.8"
-          fontSize={{ sm: "md", md: "lg", lg: "xl" }}
+          fontSize={{ base: "md", md: "lg", lg: "xl" }}
           mb="50px"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

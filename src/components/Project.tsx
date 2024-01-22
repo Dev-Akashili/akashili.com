@@ -34,7 +34,7 @@ const Project = ({ name, description, link, stack }: ProjectProps) => {
       <Box>
         <Text
           fontFamily="sans-serif"
-          fontSize={{ sm: "xl", md: "2xl", lg: "2xl" }}
+          fontSize={{ base: "xl", md: "2xl", lg: "2xl" }}
           fontWeight="bold"
         >
           {name}
@@ -46,7 +46,7 @@ const Project = ({ name, description, link, stack }: ProjectProps) => {
           <Link fontWeight="bold" href={link}>
             <Flex>
               <Text
-                fontSize={{ sm: "sm", md: "md" }}
+                fontSize={{ base: "sm", md: "md" }}
                 textDecoration="underline"
               >
                 View in Github
@@ -59,7 +59,7 @@ const Project = ({ name, description, link, stack }: ProjectProps) => {
       <Box>
         <Text
           fontFamily="sans-serif"
-          fontSize={{ sm: "lg", md: "xl", lg: "xl" }}
+          fontSize={{ base: "lg", md: "xl", lg: "xl" }}
           fontWeight="bold"
         >
           Description
@@ -69,7 +69,7 @@ const Project = ({ name, description, link, stack }: ProjectProps) => {
           fontFamily="sans-serif"
           fontWeight="thin"
           lineHeight="1.8"
-          fontSize={{ sm: "sm", md: "md", lg: "md" }}
+          fontSize={{ base: "sm", md: "md", lg: "md" }}
         >
           {description}
         </Text>
@@ -77,7 +77,7 @@ const Project = ({ name, description, link, stack }: ProjectProps) => {
       <Box>
         <Text
           fontFamily="sans-serif"
-          fontSize={{ sm: "md", md: "lg", lg: "lg" }}
+          fontSize={{ base: "md", md: "lg", lg: "lg" }}
           fontWeight="bold"
         >
           Tech Stack
@@ -86,7 +86,7 @@ const Project = ({ name, description, link, stack }: ProjectProps) => {
           {stack.map((item, index) => (
             <Tag
               key={index}
-              size={{ sm: "md", md: "lg", lg: "lg" }}
+              size={{ base: "md", md: "lg", lg: "lg" }}
               variant="outline"
               colorScheme="orange"
               borderRadius={0}
