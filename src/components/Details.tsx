@@ -5,7 +5,7 @@ const Details = () => {
   return (
     <Stack
       direction={{ base: "column-reverse", md: "row", lg: "row" }}
-      p={{ base: "20px 50px", lg: "20px 200px" }}
+      p={{ base: "20px 25px", lg: "20px 200px" }}
       gap={{ base: 6 }}
     >
       <Stack w="100%" gap={{ base: 3, md: 6, lg: 6 }}>
