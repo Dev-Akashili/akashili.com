@@ -12,6 +12,16 @@ import {
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 
+const inputStyle = {
+  borderBottom: "1px solid",
+  variant: "flushed",
+  type: "text",
+  color: "gray",
+  fontFamily: "sans-serif",
+  fontWeight: "thin",
+  fontSize: { base: "md", md: "lg", lg: "xl" }
+};
+
 const Contact = () => {
   const toast = useToast();
   const form = useRef<HTMLFormElement | null>(null);
@@ -75,32 +85,15 @@ const Contact = () => {
           <Stack w={{ base: "100%", lg: "80%" }} gap={{ base: 2, lg: 3 }}>
             <FormControl isRequired>
               <FormLabel fontSize={{ base: "sm", lg: "md" }}>Name</FormLabel>
-              <Input
-                borderBottom="1px solid"
-                variant="flushed"
-                name="name"
-                type="text"
-                h={{ base: "30px" }}
-              />
+              <Input name="name" {...inputStyle} />
             </FormControl>
             <FormControl isRequired>
               <FormLabel fontSize={{ base: "sm", lg: "md" }}>Email</FormLabel>
-              <Input
-                borderBottom="1px solid"
-                variant="flushed"
-                name="email"
-                type="text"
-                h={{ base: "30px" }}
-              />
+              <Input name="email" {...inputStyle} />
             </FormControl>
             <FormControl isRequired>
               <FormLabel fontSize={{ base: "sm", lg: "md" }}>Message</FormLabel>
-              <Textarea
-                borderBottom="1px solid"
-                variant="flushed"
-                name="message"
-                rows={3}
-              />
+              <Textarea {...inputStyle} rows={3} />
             </FormControl>
             <Button
               isLoading={isSubmitting}
