@@ -112,7 +112,10 @@ const Contact = () => {
           </Stack>
         </form>
       </Box>
-      <Stack w={{ base: "100%", md: "75%", lg: "50%" }} gap={6}>
+      <Stack
+        w={{ base: "100%", md: "75%", lg: "50%" }}
+        gap={{ base: 0, md: 2, lg: 6 }}
+      >
         <Text
           fontFamily="sans-serif"
           fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
