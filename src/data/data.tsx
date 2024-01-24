@@ -18,28 +18,55 @@ export const contactIcons: { element: React.ReactNode; link: string }[] = [
 export const projects: {
   name: string;
   description: string;
-  link: string;
+  imageLink: string;
+  githubLink: string;
   stack: string[];
 }[] = [
   {
-    name: "STAR PLATINUM",
+    name: "RedCap Monitor",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    link: "/",
-    stack: ["Typescript", "React", "C#", "ASP.NET Core"]
+    imageLink: "././redcap.png",
+    githubLink: "/",
+    stack: [
+      "C#",
+      "ASP.NET Core",
+      "Typescript",
+      "Next.js",
+      "Docker",
+      "PostgreSQL",
+      "Keycloak"
+    ]
   },
   {
-    name: "TSCD",
+    name: "Star Platinum",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    link: "/",
-    stack: ["Typescript", "React", "C#", "ASP.NET Core"]
+    imageLink: "././star-platinum.png",
+    githubLink: "/",
+    stack: [
+      "C#",
+      "ASP.NET Core",
+      "Typescript",
+      "Next.js",
+      "Docker",
+      "PostgreSQL"
+    ]
   },
   {
-    name: "COMPANY",
+    name: "Originate Merchant Portal",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    link: "/",
-    stack: ["Typescript", "React", "C#", "ASP.NET Core"]
+    imageLink: "",
+    githubLink: "/",
+    stack: ["Typescript", "React", "GraphQL", "Apollo Client", "MongoDB"]
+  },
+  {
+    name: "Tissue Sample Collectioin Details",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    imageLink: "",
+    githubLink: "/",
+    stack: ["Typescript", "React", "Nestjs", "PostgreSQL"]
   }
 ];

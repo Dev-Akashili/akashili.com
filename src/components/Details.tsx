@@ -36,12 +36,12 @@ const Details = () => {
           fontSize={{ base: "md", md: "lg", lg: "xl" }}
           mb="50px"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+          A software engineer experienced in developing and maintaining
+          fullstack applications and integration solutions for a range of
+          clients in various sectors. Currently, I am building an open source
+          software product aimed at helping developers seamlessly handle
+          authentication, authorisation and user management in their
+          applications.
         </Text>
         <Stack
           direction="row"

@@ -2,11 +2,13 @@ import {
   Box,
   Collapse,
   Flex,
+  Image,
   Link,
   Stack,
   Tag,
   TagLabel,
   Text,
+  useColorMode,
   useDisclosure
 } from "@chakra-ui/react";
 import { ExternalLink } from "lucide-react";
@@ -14,12 +16,20 @@ import { ExternalLink } from "lucide-react";
 interface ProjectProps {
   name: string;
   description: string;
-  link: string;
+  imageLink: string;
+  githubLink: string;
   stack: string[];
 }
 
-const Project = ({ name, description, link, stack }: ProjectProps) => {
+const Project = ({
+  name,
+  description,
+  githubLink,
+  imageLink,
+  stack
+}: ProjectProps) => {
   const { isOpen, onToggle } = useDisclosure();
+  const { colorMode } = useColorMode();
 
   return (
     <Stack
@@ -39,11 +49,25 @@ const Project = ({ name, description, link, stack }: ProjectProps) => {
         >
           {name}
         </Text>
-        <Box minH="300px" minW="100px" border="2px solid"></Box>
+        <Box
+          border={colorMode === "light" ? "1.5px solid" : "none"}
+          overflow="hidden"
+        >
+          <Image
+            src={imageLink}
+            minH="300px"
+            minW="100px"
+            transition="transform 0.3s ease"
+            _hover={{
+              transform: `scale(1.3)`,
+              filter: "blur(3px)"
+            }}
+          />
+        </Box>
       </Box>
       <Collapse in={isOpen}>
         <Box _hover={{ color: "orange" }}>
-          <Link fontWeight="bold" href={link}>
+          <Link fontWeight="bold" href={githubLink}>
             <Flex>
               <Text
                 fontSize={{ base: "sm", md: "md" }}

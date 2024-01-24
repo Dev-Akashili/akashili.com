@@ -19,7 +19,8 @@ const Projects = () => {
           <Project
             name={project.name}
             description={project.description}
-            link={project.link}
+            imageLink={project.imageLink}
+            githubLink={project.githubLink}
             stack={project.stack}
           />
         </Box>

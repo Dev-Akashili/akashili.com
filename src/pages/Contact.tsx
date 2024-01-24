@@ -114,7 +114,7 @@ const Contact = () => {
       </Box>
       <Stack
         w={{ base: "100%", md: "75%", lg: "50%" }}
-        gap={{ base: 0, md: 2, lg: 6 }}
+        gap={{ base: 0, md: 2, lg: 0 }}
       >
         <Text
           fontFamily="sans-serif"
@@ -131,10 +131,8 @@ const Contact = () => {
           fontSize={{ base: "md", md: "lg", lg: "xl" }}
           mb="50px"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          Got any project ideas, proposals, or job opportunities to discuss?
+          Fill out the form, and I'll get back to you shortly.
         </Text>
       </Stack>
     </Stack>
