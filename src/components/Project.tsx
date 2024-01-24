@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Collapse,
   Flex,
   Image,
@@ -12,6 +13,7 @@ import {
   useDisclosure
 } from "@chakra-ui/react";
 import { ExternalLink } from "lucide-react";
+import { useState } from "react";
 
 interface ProjectProps {
   name: string;
@@ -30,15 +32,18 @@ const Project = ({
 }: ProjectProps) => {
   const { isOpen, onToggle } = useDisclosure();
   const { colorMode } = useColorMode();
+  const [isHovered, setIsHovered] = useState<boolean>(false);
 
   return (
     <Stack
       gap={3}
       onMouseEnter={() => {
         onToggle();
+        setIsHovered(true);
       }}
       onMouseLeave={() => {
         onToggle();
+        setIsHovered(false);
       }}
     >
       <Box>
@@ -50,6 +55,9 @@ const Project = ({
           {name}
         </Text>
         <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
           border={colorMode === "light" ? "1.5px solid" : "none"}
           overflow="hidden"
         >
@@ -58,28 +66,33 @@ const Project = ({
             minH={{ base: "250px", md: "300px", lg: "300px" }}
             minW="100px"
             transition="transform 0.3s ease"
-            _hover={{
-              transform: `scale(1.3)`,
-              filter: "blur(3px)"
-            }}
+            transform={isHovered ? `scale(1.3)` : ""}
+            filter={isHovered ? "blur(3px)" : ""}
           />
+          <Box position="absolute">
+            <Collapse in={isOpen}>
+              <Link
+                _hover={{ textDecor: "none" }}
+                fontWeight="bold"
+                href={githubLink}
+              >
+                <Button
+                  size={{ base: "sm", md: "lg", lg: "lg" }}
+                  variant="outline"
+                  borderColor={colorMode === "light" ? "orange" : "orange.300"}
+                  color={colorMode === "light" ? "orange" : "orange.300"}
+                  borderRadius={0}
+                  _hover={{ bgColor: "orange.300", color: "black" }}
+                  display={isHovered ? "" : "none"}
+                  rightIcon={<ExternalLink height="18px" />}
+                >
+                  View in Github
+                </Button>
+              </Link>
+            </Collapse>
+          </Box>
         </Box>
       </Box>
-      <Collapse in={isOpen}>
-        <Box _hover={{ color: "orange" }}>
-          <Link fontWeight="bold" href={githubLink}>
-            <Flex>
-              <Text
-                fontSize={{ base: "sm", md: "md" }}
-                textDecoration="underline"
-              >
-                View in Github
-              </Text>
-              <ExternalLink height="18px" />
-            </Flex>
-          </Link>
-        </Box>
-      </Collapse>
       <Box>
         <Text
           fontFamily="sans-serif"
@@ -111,7 +124,7 @@ const Project = ({
             <Tag
               key={index}
               size={{ base: "md", md: "lg", lg: "lg" }}
-              variant="outline"
+              variant={colorMode === "light" ? "outline" : "subtle"}
               colorScheme="orange"
               borderRadius={0}
             >
