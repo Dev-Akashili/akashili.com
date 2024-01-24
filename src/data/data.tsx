@@ -57,7 +57,7 @@ export const projects: {
     name: "Originate Merchant Portal",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    imageLink: "",
+    imageLink: "././originate.png",
     githubLink: "/",
     stack: ["Typescript", "React", "GraphQL", "Apollo Client", "MongoDB"]
   },
@@ -65,7 +65,7 @@ export const projects: {
     name: "Tissue Sample Collectioin Details",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    imageLink: "",
+    imageLink: "././tscd.png",
     githubLink: "/",
     stack: ["Typescript", "React", "Nestjs", "PostgreSQL"]
   }
