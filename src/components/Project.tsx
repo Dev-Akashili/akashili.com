@@ -55,7 +55,7 @@ const Project = ({
         >
           <Image
             src={imageLink}
-            minH="300px"
+            minH={{ base: "250px", md: "300px", lg: "300px" }}
             minW="100px"
             transition="transform 0.3s ease"
             _hover={{
