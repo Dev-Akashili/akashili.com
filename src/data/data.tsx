@@ -25,9 +25,9 @@ export const projects: {
   {
     name: "RedCap Monitor",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "A project in collaboration with Nottingham University Hospital, being built to monitor the health of RedCap Cloud instances. The project currently consists of a web application along with the integration of an Azure Functions app.",
     imageLink: "././redcap.png",
-    githubLink: "/",
+    githubLink: "https://github.com/Health-Informatics-UoN/rcc-monitor",
     stack: [
       "C#",
       "ASP.NET Core",
@@ -41,9 +41,9 @@ export const projects: {
   {
     name: "Star Platinum",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "An open source project being built to simplify user authentication and authorization for developers. It offers intuitive API endpoints and a user interface to streamline user management integration, allowing you to concentrate on your core application.",
     imageLink: "././star-platinum.png",
-    githubLink: "/",
+    githubLink: "https://github.com/Dev-Akashili/star-platinum",
     stack: [
       "C#",
       "ASP.NET Core",
@@ -56,17 +56,17 @@ export const projects: {
   {
     name: "Originate Merchant Portal",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "A fintech software credit tool that automates loan origination process. It incorporates web forms for capturing loan application data, conducting verification, and also seamlessly integrates with credit bureaus, AML/KYC services, and various other systems.",
     imageLink: "././originate.png",
-    githubLink: "/",
+    githubLink: "https://indicina.co/originate",
     stack: ["Typescript", "React", "GraphQL", "Apollo Client", "MongoDB"]
   },
   {
-    name: "Tissue Sample Collectioin Details",
+    name: "Data Structures & Algorithms",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    imageLink: "././tscd.png",
-    githubLink: "/",
-    stack: ["Typescript", "React", "Nestjs", "PostgreSQL"]
+      "This points to a GitHub repository that contains breakdowns of the implementation of different data structures and algoriths. It also documents my personal journey to learn more about DSAs and understanding system design patterns.",
+    imageLink: "././dsa.png",
+    githubLink: "https://github.com/Dev-Akashili/DSAs",
+    stack: ["Python", "C#", "Typescript"]
   }
 ];

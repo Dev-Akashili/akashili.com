@@ -75,6 +75,7 @@ const Project = ({
                 _hover={{ textDecor: "none" }}
                 fontWeight="bold"
                 href={githubLink}
+                target="_blank"
               >
                 <Button
                   size={{ base: "sm", md: "lg", lg: "lg" }}
@@ -86,7 +87,9 @@ const Project = ({
                   display={isHovered ? "" : "none"}
                   rightIcon={<ExternalLink height="18px" />}
                 >
-                  View in Github
+                  {name === "Originate Merchant Portal"
+                    ? "View Live"
+                    : " View in Github"}
                 </Button>
               </Link>
             </Collapse>
