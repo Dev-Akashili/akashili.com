@@ -59,7 +59,17 @@ export const projects: {
       "A fintech software credit tool that automates loan origination process. It incorporates web forms for capturing loan application data, conducting verification, and also seamlessly integrates with credit bureaus, AML/KYC services, and various other systems.",
     imageLink: "././originate.png",
     githubLink: "https://indicina.co/originate",
-    stack: ["Typescript", "React", "GraphQL", "Apollo Client", "MongoDB"]
+    stack: [
+      "Typescript",
+      "React",
+      "Node.js",
+      "Nestjs",
+      "Docker",
+      "GraphQL",
+      "Apollo Client",
+      "MongoDB",
+      "RabbitMQ"
+    ]
   },
   {
     name: "Data Structures & Algorithms",
