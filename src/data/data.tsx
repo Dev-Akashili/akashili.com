@@ -23,6 +23,21 @@ export const projects: {
   stack: string[];
 }[] = [
   {
+    name: "Star Platinum",
+    description:
+      "An open source project being built to simplify user authentication and authorization for developers. It offers intuitive API endpoints and a user interface to streamline user management integration, allowing you to concentrate on your core application.",
+    imageLink: "././star-platinum.png",
+    githubLink: "https://github.com/Dev-Akashili/star-platinum",
+    stack: [
+      "C#",
+      "ASP.NET Core",
+      "Typescript",
+      "Next.js",
+      "Docker",
+      "PostgreSQL"
+    ]
+  },
+  {
     name: "RedCap Monitor",
     description:
       "A project in collaboration with Nottingham University Hospital, being built to monitor the health of RedCap Cloud instances. The project currently consists of a web application along with the integration of an Azure Functions app.",
@@ -39,19 +54,12 @@ export const projects: {
     ]
   },
   {
-    name: "Star Platinum",
+    name: "CaRROT Mapper",
     description:
-      "An open source project being built to simplify user authentication and authorization for developers. It offers intuitive API endpoints and a user interface to streamline user management integration, allowing you to concentrate on your core application.",
-    imageLink: "././star-platinum.png",
-    githubLink: "https://github.com/Dev-Akashili/star-platinum",
-    stack: [
-      "C#",
-      "ASP.NET Core",
-      "Typescript",
-      "Next.js",
-      "Docker",
-      "PostgreSQL"
-    ]
+      "A web application designed for the mapping process of datasets to OMOP standard and generation of mapping rules in JSON format. The application offers automated mapping from various vocabularies, enables rule reuse across datasets, and allows manual rule creation.",
+    imageLink: "././carrot.png",
+    githubLink: "https://github.com/Health-Informatics-UoN/CaRROT-Mapper",
+    stack: ["Python", "Django", "React", "PostgreSQL", "Azure Functions"]
   },
   {
     name: "Originate Merchant Portal",
@@ -70,13 +78,5 @@ export const projects: {
       "MongoDB",
       "RabbitMQ"
     ]
-  },
-  {
-    name: "Data Structures & Algorithms",
-    description:
-      "This points to a GitHub repository that contains breakdowns of the implementation of different data structures and algoriths. It also documents my personal journey to learn more about DSAs and understanding system design patterns.",
-    imageLink: "././dsa.png",
-    githubLink: "https://github.com/Dev-Akashili/DSAs",
-    stack: ["Python", "C#", "Typescript"]
   }
 ];
