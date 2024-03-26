@@ -13,6 +13,7 @@ const Projects = () => {
         md: "center",
         lg: "space-between"
       }}
+      maxW="2000px"
     >
       {projects.map((project, index) => (
         <Box key={index} w={{ base: "100%", md: "70%", lg: "45%" }}>

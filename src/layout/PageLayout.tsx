@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 
 const PageLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <Box>
+    <Box minH="100vh" >
       <Navbar />
       {children}
     </Box>
