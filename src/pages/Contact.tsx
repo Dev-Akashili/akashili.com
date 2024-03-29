@@ -93,7 +93,7 @@ const Contact = () => {
             </FormControl>
             <FormControl isRequired>
               <FormLabel fontSize={{ base: "sm", lg: "md" }}>Message</FormLabel>
-              <Textarea {...inputStyle} rows={3} />
+              <Textarea name="message" {...inputStyle} rows={3} />
             </FormControl>
             <Button
               isLoading={isSubmitting}
