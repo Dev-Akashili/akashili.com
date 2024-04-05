@@ -15,7 +15,6 @@ import { useRef, useState } from "react";
 const inputStyle = {
   borderBottom: "1px solid",
   variant: "flushed",
-  type: "text",
   color: "gray",
   fontFamily: "sans-serif",
   fontWeight: "thin",
@@ -85,11 +84,11 @@ const Contact = () => {
           <Stack w={{ base: "100%", lg: "80%" }} gap={{ base: 2, lg: 3 }}>
             <FormControl isRequired>
               <FormLabel fontSize={{ base: "sm", lg: "md" }}>Name</FormLabel>
-              <Input name="name" {...inputStyle} />
+              <Input name="name" type="text" {...inputStyle} />
             </FormControl>
             <FormControl isRequired>
               <FormLabel fontSize={{ base: "sm", lg: "md" }}>Email</FormLabel>
-              <Input name="email" {...inputStyle} />
+              <Input name="email" type="email" {...inputStyle} />
             </FormControl>
             <FormControl isRequired>
               <FormLabel fontSize={{ base: "sm", lg: "md" }}>Message</FormLabel>
