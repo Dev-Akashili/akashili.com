@@ -39,10 +39,9 @@ const Details = () => {
         >
           A software engineer experienced in developing and maintaining
           fullstack applications and integration solutions for a range of
-          clients in various sectors. Currently, I am building an open source
-          software product aimed at helping developers seamlessly handle
-          authentication, authorisation and user management in their
-          applications.
+          clients in various sectors. Currently, I am building a web application
+          aimed at transforming the job search process for job seekers in
+          Europe, America, and Africa, across various industries.
         </Text>
         <Stack
           direction="row"

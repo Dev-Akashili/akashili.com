@@ -3,16 +3,16 @@ import { Github, Linkedin, Mail } from "lucide-react";
 export const navlinks: { name: string; to: string }[] = [
   {
     name: "RESUME",
-    to: "https://drive.google.com/file/d/1jdMOFJ-EhDveKA8bXspMQ8qETs1xv6YZ/view"
+    to: "https://drive.google.com/file/d/1jdMOFJ-EhDveKA8bXspMQ8qETs1xv6YZ/view",
   },
   { name: "PROJECTS", to: "/projects" },
-  { name: "CONTACT ME", to: "/contact" }
+  { name: "CONTACT ME", to: "/contact" },
 ];
 
 export const contactIcons: { element: React.ReactNode; link: string }[] = [
   { element: <Github />, link: "https://github.com/Dev-Akashili" },
   { element: <Linkedin />, link: "https://www.linkedin.com/in/akashili/" },
-  { element: <Mail />, link: "/contact" }
+  { element: <Mail />, link: "/contact" },
 ];
 
 export const projects: {
@@ -23,19 +23,20 @@ export const projects: {
   stack: string[];
 }[] = [
   {
-    name: "Star Platinum",
+    name: "Work Bunny",
     description:
-      "An open source project being built to simplify user authentication and authorization for developers. It offers intuitive API endpoints and a user interface to streamline user management integration, allowing you to concentrate on your core application.",
-    imageLink: "././star-platinum.png",
-    githubLink: "https://github.com/Dev-Akashili/star-platinum",
+      "A web application being built to connect job seekers across Europe, America and Africa, in different stages of their job search (searching, interviewing and hired), to share and receive useful insight, and ultimately help them land their dream job.",
+    imageLink: "././workbunny.png",
+    githubLink: "https://github.com/Dev-Akashili/workbunny-webapp",
     stack: [
       "C#",
       "ASP.NET Core",
       "Typescript",
-      "Next.js",
+      "React",
+      "Chakra-UI",
       "Docker",
-      "PostgreSQL"
-    ]
+      "PostgreSQL",
+    ],
   },
   {
     name: "RedCap Monitor",
@@ -50,8 +51,8 @@ export const projects: {
       "Next.js",
       "Docker",
       "PostgreSQL",
-      "Keycloak"
-    ]
+      "Keycloak",
+    ],
   },
   {
     name: "CaRROT Mapper",
@@ -59,7 +60,29 @@ export const projects: {
       "A web application designed for the mapping process of datasets to OMOP standard and generation of mapping rules in JSON format. The application offers automated mapping from various vocabularies, enables rule reuse across datasets, and allows manual rule creation.",
     imageLink: "././carrot.png",
     githubLink: "https://github.com/Health-Informatics-UoN/CaRROT-Mapper",
-    stack: ["Python", "Django", "React", "PostgreSQL", "Azure Functions"]
+    stack: [
+      "Python",
+      "Django",
+      "React",
+      "Docker",
+      "PostgreSQL",
+      "Azure Functions",
+    ],
+  },
+  {
+    name: "Star Platinum",
+    description:
+      "An open source project being built to simplify user authentication and authorization for developers. It offers intuitive API endpoints and a user interface to streamline user management integration, allowing you to concentrate on your core application.",
+    imageLink: "././star-platinum.png",
+    githubLink: "https://github.com/Dev-Akashili/star-platinum",
+    stack: [
+      "C#",
+      "ASP.NET Core",
+      "Typescript",
+      "Next.js",
+      "Docker",
+      "PostgreSQL",
+    ],
   },
   {
     name: "Originate Merchant Portal",
@@ -76,7 +99,7 @@ export const projects: {
       "GraphQL",
       "Apollo Client",
       "MongoDB",
-      "RabbitMQ"
-    ]
-  }
+      "RabbitMQ",
+    ],
+  },
 ];
