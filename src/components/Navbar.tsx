@@ -1,23 +1,43 @@
-import { Flex, Stack, Link, Box, useColorMode, Image } from "@chakra-ui/react";
+import {
+  Flex,
+  Stack,
+  Link as ChakraLink,
+  Box,
+  useColorMode,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 import { Moon, Sun } from "lucide-react";
 import { navlinks } from "../data/data";
+import { Link } from "react-router-dom";
 
 interface NavLinkProps {
   name: string;
-  to: string;
+  link: string;
 }
 
-const NavLink = ({ name, to }: NavLinkProps) => {
-  return (
-    <Link
+const NavLink = ({ name, link }: NavLinkProps) => {
+  return name === "RESUME" ? (
+    <ChakraLink
       as="a"
       fontSize="xs"
       fontWeight="bold"
       _hover={{ borderBottom: "2px solid orange", color: "orange" }}
-      href={to}
-      target={name === "RESUME" ? "_blank" : "_self"}
+      href={link}
+      target="_blank"
     >
       {name}
+    </ChakraLink>
+  ) : (
+    <Link to={link}>
+      <Text
+        as="a"
+        fontSize="xs"
+        fontWeight="bold"
+        _hover={{ borderBottom: "2px solid orange", color: "orange" }}
+      >
+        {name}
+      </Text>
     </Link>
   );
 };
@@ -27,30 +47,31 @@ const Navbar = () => {
 
   return (
     <Flex minH="100px" alignItems="center">
-      <Link
-        ml="50px"
-        fontSize="md"
-        fontWeight="extrabold"
-        fontFamily="sans-serif"
-        _hover={{ textDecoration: "none" }}
-        href="/"
-        display={{ base: "none", md: "inline", lg: "inline" }}
-      >
-        Akashili.com
+      <Link to="/">
+        <Text
+          ml="50px"
+          fontSize="md"
+          fontWeight="extrabold"
+          fontFamily="sans-serif"
+          display={{ base: "none", md: "inline", lg: "inline" }}
+        >
+          Akashili.com
+        </Text>
       </Link>
-      <Link
+      <Box
         ml="30px"
         position="absolute"
         display={{ base: "inline", md: "none", lg: "none" }}
-        href="/"
         alignItems="center"
       >
-        <Image src="././bolt.png" />
-      </Link>
+        <Link to="/">
+          <Image src="././bolt.png" />
+        </Link>
+      </Box>
       <Stack direction="row" gap={3} ml="100px">
         {navlinks.map((navlink, index) => (
           <Box key={index}>
-            <NavLink name={navlink.name} to={navlink.to} />
+            <NavLink name={navlink.name} link={navlink.to} />
           </Box>
         ))}
       </Stack>
