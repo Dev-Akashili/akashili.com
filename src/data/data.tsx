@@ -70,21 +70,6 @@ export const projects: {
     ],
   },
   {
-    name: "Star Platinum",
-    description:
-      "An open source project being built to simplify user authentication and authorization for developers. It offers intuitive API endpoints and a user interface to streamline user management integration, allowing you to concentrate on your core application.",
-    imageLink: "././star-platinum.png",
-    githubLink: "https://github.com/Dev-Akashili/star-platinum",
-    stack: [
-      "C#",
-      "ASP.NET Core",
-      "Typescript",
-      "Next.js",
-      "Docker",
-      "PostgreSQL",
-    ],
-  },
-  {
     name: "Originate Merchant Portal",
     description:
       "A fintech software credit tool that automates loan origination process. It incorporates web forms for capturing loan application data, conducting verification, and also seamlessly integrates with credit bureaus, AML/KYC services, and various other systems.",
@@ -100,6 +85,21 @@ export const projects: {
       "Apollo Client",
       "MongoDB",
       "RabbitMQ",
+    ],
+  },
+  {
+    name: "Star Platinum",
+    description:
+      "An open source project being built to simplify user authentication and authorization for developers. It offers intuitive API endpoints and a user interface to streamline user management integration, allowing you to concentrate on your core application.",
+    imageLink: "././star-platinum.png",
+    githubLink: "https://github.com/Dev-Akashili/star-platinum",
+    stack: [
+      "C#",
+      "ASP.NET Core",
+      "Typescript",
+      "Next.js",
+      "Docker",
+      "PostgreSQL",
     ],
   },
 ];
