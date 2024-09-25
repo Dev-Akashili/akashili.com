@@ -86,8 +86,8 @@ const IndexPage = () => {
       <Text fontSize={{ base: "md", md: "lg", lg: "lg" }}>
         I am proficient in fullstack software development using programming
         languages such as <Span>Typescript</Span>, <Span>C#</Span> and{" "}
-        <Span>Python</Span> utilizing frameworks including<Span>.NET Core</Span>
-        , <Span>React</Span> and <Span>Next.js</Span>,.
+        <Span>Python</Span> utilizing frameworks including{" "}
+        <Span>.NET Core</Span>, <Span>React</Span> and <Span>Next.js</Span>,.
       </Text>
       <Flex gap={"20px"} alignItems="center">
         {PAGE_LINKS.map((item) => (
