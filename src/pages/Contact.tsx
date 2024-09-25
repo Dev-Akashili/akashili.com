@@ -7,24 +7,21 @@ import {
   Stack,
   Text,
   Textarea,
+  useColorMode,
   useToast
 } from "@chakra-ui/react";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 
 const inputStyle = {
-  borderBottom: "1px solid",
-  variant: "flushed",
-  color: "gray",
-  fontFamily: "sans-serif",
-  fontWeight: "thin",
-  fontSize: { base: "md", md: "lg", lg: "xl" }
+  border: "1px solid"
 };
 
 const Contact = () => {
   const toast = useToast();
   const form = useRef<HTMLFormElement | null>(null);
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const { colorMode } = useColorMode();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -70,18 +67,36 @@ const Contact = () => {
   };
 
   return (
-    <Stack
-      direction={{ base: "column-reverse", md: "row", lg: "row" }}
-      p={{ base: "20px 35px", md: "20px 80px", lg: "20px 200px" }}
-      gap={{ base: 0, md: 5, lg: 0 }}
-    >
-      <Box
-        w={{ base: "100%", md: "75%", lg: "50%" }}
-        mt={5}
-        textAlign={{ base: "center" }}
+    <Stack mt={"20px"} gap={"10px"}>
+      <Text
+        fontSize={{ base: "35px", md: "40px", lg: "45px" }}
+        fontWeight={"semibold"}
+        textAlign={"center"}
       >
-        <form ref={form} onSubmit={handleSubmit}>
-          <Stack w={{ base: "100%", lg: "80%" }} gap={{ base: 2, lg: 3 }}>
+        Contact Me
+      </Text>
+      <Stack textAlign={"center"}>
+        <Text> Fill out the form, and I'll get back to you shortly.</Text>
+        <Text>
+          Or send an email to{" "}
+          <span>
+            <a
+              href="mailto:chukwuemeka.akashili@gmail.com"
+              style={{
+                fontWeight: "bold",
+                textDecoration: "underline",
+                color: "#3182ce",
+                cursor: "pointer"
+              }}
+            >
+              chukwuemeka.akashili@gmail.com
+            </a>
+          </span>
+        </Text>
+      </Stack>
+      <Box px={{ base: 0, md: "15px", lg: "18px" }}>
+        <form onSubmit={handleSubmit} ref={form}>
+          <Stack gap={"10px"}>
             <FormControl isRequired>
               <FormLabel fontSize={{ base: "sm", lg: "md" }}>Name</FormLabel>
               <Input name="name" type="text" {...inputStyle} />
@@ -92,17 +107,16 @@ const Contact = () => {
             </FormControl>
             <FormControl isRequired>
               <FormLabel fontSize={{ base: "sm", lg: "md" }}>Message</FormLabel>
-              <Textarea name="message" {...inputStyle} rows={3} />
+              <Textarea name="message" {...inputStyle} rows={5} />
             </FormControl>
             <Button
+              w={"100px"}
               isLoading={isSubmitting}
-              backgroundColor="black"
-              color="white"
+              color={colorMode === "dark" ? "black" : "white"}
+              backgroundColor={colorMode === "dark" ? "white" : "black"}
               fontSize={{ base: "sm", lg: "md" }}
-              borderRadius={0}
               _hover={{
-                backgroundColor: isSubmitting ? "black" : "orange",
-                color: isSubmitting ? "white" : "black"
+                backgroundColor: "blue.500"
               }}
               type="submit"
             >
@@ -111,29 +125,6 @@ const Contact = () => {
           </Stack>
         </form>
       </Box>
-      <Stack
-        w={{ base: "100%", md: "75%", lg: "50%" }}
-        gap={{ base: 0, md: 2, lg: 0 }}
-      >
-        <Text
-          fontFamily="sans-serif"
-          fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
-          fontWeight="bold"
-        >
-          Contact Me
-        </Text>
-        <Text
-          color="gray"
-          fontFamily="sans-serif"
-          fontWeight="thin"
-          lineHeight="1.8"
-          fontSize={{ base: "md", md: "lg", lg: "xl" }}
-          mb="50px"
-        >
-          Got any project ideas, proposals, or job opportunities to discuss?
-          Fill out the form, and I'll get back to you shortly.
-        </Text>
-      </Stack>
     </Stack>
   );
 };

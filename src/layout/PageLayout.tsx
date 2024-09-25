@@ -4,7 +4,13 @@ import Navbar from "../components/Navbar";
 
 const PageLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <Box minH="100vh" w="100%" >
+    <Box
+      m={"auto"}
+      minH="100vh"
+      minW={"350px"}
+      maxW={"800px"}
+      w={{ base: "90%", md: "95vh", lg: "95vh" }}
+    >
       <Navbar />
       {children}
     </Box>
