@@ -15,7 +15,7 @@ const theme = extendTheme({
     global: (props: StyleFunctionProps) => ({
       body: {
         fontFamily: "Moderustic, sans-serif",
-        bg: props.colorMode === "dark" ? "black" : "white",
+        bg: props.colorMode === "dark" ? "black" : "gray.100",
         color: props.colorMode === "dark" ? "whiteAlpha.900" : "gray.800"
       }
     })
