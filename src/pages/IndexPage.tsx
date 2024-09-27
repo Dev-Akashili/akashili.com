@@ -22,13 +22,13 @@ const PAGE_LINKS = [
 
 const Span = ({ children }: { children: React.ReactNode }) => {
   const { colorMode } = useColorMode();
-  const linkColor = colorMode === "dark" ? "white" : "black";
 
   return (
     <span
-      style={{ fontWeight: "bold", color: linkColor }}
-      onMouseEnter={(e) => (e.currentTarget.style.color = "#3182ce")}
-      onMouseLeave={(e) => (e.currentTarget.style.color = linkColor)}
+      style={{
+        fontWeight: "bold",
+        color: colorMode === "dark" ? "white" : "black"
+      }}
     >
       {children}
     </span>
@@ -47,21 +47,20 @@ const IndexPage = () => {
     >
       <Flex
         gap={"8px"}
-        flexDir={{ base: "column", md: "row", lg: "row" }}
+        flexDir={{ base: "column", md: "column", lg: "row" }}
         fontSize={{ base: "35px", md: "40px", lg: "45px" }}
-        _hover={{ color: "blue.500" }}
         fontWeight={"semibold"}
       >
         <Text>Hello,</Text>
         <Text>I'm Emeka Akashili</Text>
       </Flex>
-      <Text fontSize={{ base: "md", md: "lg", lg: "lg" }}>
+      <Text fontSize={{ base: "md", md: "17px", lg: "lg" }}>
         I am a <Span>Software Engineer</Span> at the{" "}
-        <Span>University of Nottingham</Span>, currently working on research
+        <Span>University of Nottingham</Span>, currently working on a variety of
         software projects.
       </Text>
-      <Text fontSize={{ base: "md", md: "lg", lg: "lg" }}>
-        I am also building a web site called{" "}
+      <Text fontSize={{ base: "md", md: "17px", lg: "lg" }}>
+        I am also building a website called{" "}
         <span>
           <a
             href={"https://github.com/Dev-Akashili/sponsorship-base"}
@@ -83,11 +82,11 @@ const IndexPage = () => {
         which will help professionals in Uk and Europe to find jobs that offer
         visa sponsorship.
       </Text>
-      <Text fontSize={{ base: "md", md: "lg", lg: "lg" }}>
+      <Text fontSize={{ base: "md", md: "17px", lg: "lg" }}>
         I am proficient in fullstack software development using programming
         languages such as <Span>Typescript</Span>, <Span>C#</Span> and{" "}
         <Span>Python</Span> utilizing frameworks including{" "}
-        <Span>.NET Core</Span>, <Span>React</Span> and <Span>Next.js</Span>,.
+        <Span>.NET Core</Span>, <Span>React</Span> and <Span>Next.js</Span>.
       </Text>
       <Flex gap={"20px"} alignItems="center">
         {PAGE_LINKS.map((item) => (
