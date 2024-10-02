@@ -47,7 +47,7 @@ const IndexPage = () => {
     >
       <Flex
         gap={"8px"}
-        flexDir={{ base: "column", md: "column", lg: "row" }}
+        flexDir={{ base: "column", md: "row", lg: "row" }}
         fontSize={{ base: "35px", md: "40px", lg: "45px" }}
         fontWeight={"semibold"}
       >
@@ -55,9 +55,9 @@ const IndexPage = () => {
         <Text>I'm Emeka Akashili</Text>
       </Flex>
       <Text fontSize={{ base: "md", md: "17px", lg: "lg" }}>
-        I am a <Span>Software Engineer</Span> at the{" "}
-        <Span>University of Nottingham</Span>, currently working on a variety of
-        software projects.
+        I am a <Span>Software Engineer</Span> current working at the{" "}
+        <Span>University of Nottingham</Span>, on the{" "}
+        <Span>Digital Research Service</Span> team.
       </Text>
       <Text fontSize={{ base: "md", md: "17px", lg: "lg" }}>
         I am also building a website called{" "}

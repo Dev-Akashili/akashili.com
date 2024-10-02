@@ -94,7 +94,7 @@ const Contact = () => {
           </span>
         </Text>
       </Stack>
-      <Box px={{ base: 0, md: "65px", lg: "55px" }}>
+      <Box px={{ base: 0, md: "130px", lg: "130px" }}>
         <form onSubmit={handleSubmit} ref={form}>
           <Stack gap={"10px"}>
             <FormControl isRequired>

@@ -9,7 +9,7 @@ const PageLayout = ({ children }: { children: ReactNode }) => {
       minH="100vh"
       minW={"350px"}
       maxW={"800px"}
-      w={{ base: "90%", md: "95vh", lg: "95vh" }}
+      w={{ base: "90%", md: "700px", lg: "95vh" }}
     >
       <Navbar />
       {children}
