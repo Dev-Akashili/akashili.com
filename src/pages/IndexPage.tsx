@@ -55,7 +55,7 @@ const IndexPage = () => {
         <Text>I'm Emeka Akashili</Text>
       </Flex>
       <Text fontSize={{ base: "md", md: "17px", lg: "lg" }}>
-        I am a <Span>Software Engineer</Span> current working at the{" "}
+        I am a <Span>Software Engineer</Span> currently working at the{" "}
         <Span>University of Nottingham</Span>, on the{" "}
         <Span>Digital Research Service</Span> team.
       </Text>
@@ -83,10 +83,10 @@ const IndexPage = () => {
         visa sponsorship.
       </Text>
       <Text fontSize={{ base: "md", md: "17px", lg: "lg" }}>
-        I am proficient in fullstack software development using programming
-        languages such as <Span>Typescript</Span>, <Span>C#</Span> and{" "}
-        <Span>Python</Span> utilizing frameworks including{" "}
-        <Span>.NET Core</Span>, <Span>React</Span> and <Span>Next.js</Span>.
+        I specialize in fullstack software development using programming
+        languages which includes <Span>C#</Span> and <Span>Typescript</Span>, utilizing
+        frameworks including <Span>.NET Core</Span>, <Span>React</Span> and{" "}
+        <Span>Next.js</Span>.
       </Text>
       <Flex gap={"20px"} alignItems="center">
         {PAGE_LINKS.map((item) => (
