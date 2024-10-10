@@ -75,26 +75,7 @@ const Contact = () => {
       >
         Contact Me
       </Text>
-      <Stack textAlign={"center"}>
-        <Text> Fill out the form, and I'll get back to you shortly.</Text>
-        <Text>
-          Or send an email to{" "}
-          <span>
-            <a
-              href="mailto:chukwuemeka.akashili@gmail.com"
-              style={{
-                fontWeight: "bold",
-                textDecoration: "underline",
-                color: "#3182ce",
-                cursor: "pointer"
-              }}
-            >
-              chukwuemeka.akashili@gmail.com
-            </a>
-          </span>
-        </Text>
-      </Stack>
-      <Box px={{ base: 0, md: "130px", lg: "130px" }}>
+      <Box px={{ base: 0, md: "75px", lg: "75px" }}>
         <form onSubmit={handleSubmit} ref={form}>
           <Stack gap={"10px"}>
             <FormControl isRequired>
@@ -109,20 +90,21 @@ const Contact = () => {
               <FormLabel fontSize={{ base: "sm", lg: "md" }}>Message</FormLabel>
               <Textarea name="message" {...inputStyle} rows={5} />
             </FormControl>
-            <Button
-              w={"100px"}
-              isLoading={isSubmitting}
-              color={colorMode === "dark" ? "black" : "white"}
-              backgroundColor={colorMode === "dark" ? "white" : "black"}
-              fontSize={{ base: "sm", lg: "md" }}
-              _hover={{
-                backgroundColor: "blue.500"
-              }}
-              type="submit"
-            >
-              Submit
-            </Button>
           </Stack>
+          <Button
+            w={"100%"}
+            mt={10}
+            isLoading={isSubmitting}
+            color={colorMode === "dark" ? "black" : "white"}
+            backgroundColor={colorMode === "dark" ? "white" : "black"}
+            fontSize={{ base: "sm", lg: "md" }}
+            _hover={{
+              backgroundColor: "blue.500"
+            }}
+            type="submit"
+          >
+            Submit
+          </Button>
         </form>
       </Box>
     </Stack>
