@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const location = useLocation();
+  const isContactPage = location.pathname.includes("contact");
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
@@ -11,7 +12,7 @@ const Navbar = () => {
       minH={{ base: "60px", md: "100px", lg: "100px" }}
       justifyContent={"space-between"}
     >
-      {location.pathname.includes("contact") ? (
+      {isContactPage ? (
         <Link to={"/"} style={{ marginTop: "auto" }}>
           <Button size={"sm"} variant={"ghost"} _hover={{ color: "blue.500" }}>
             <MoveLeft />
