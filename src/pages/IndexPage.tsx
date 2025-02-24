@@ -55,15 +55,15 @@ const IndexPage = () => {
         <Text>I'm Emeka Akashili</Text>
       </Flex>
       <Text fontSize={{ base: "md", md: "17px", lg: "lg" }}>
-        I am a <Span>Software Engineer</Span> currently working at the{" "}
-        <Span>University of Nottingham</Span>, on the{" "}
-        <Span>Digital Research Service</Span> team.
+        I am a <Span>Software Developer</Span> currently working at{" "}
+        <Span>Loughborough University</Span>, on the{" "}
+        <Span>Corporate Systems</Span> team.
       </Text>
       <Text fontSize={{ base: "md", md: "17px", lg: "lg" }}>
         I am also building a website called{" "}
         <span>
           <a
-            href={"https://github.com/Dev-Akashili/sponsorship-base"}
+            href={"https://sponsorshipbase.com"}
             target={"_blank"}
             style={{
               fontWeight: "bold",
@@ -79,7 +79,7 @@ const IndexPage = () => {
             Sponsorship Base
           </a>
         </span>{" "}
-        which will help professionals in Uk and Europe to find jobs that offer
+        to help professionals in UK and Europe to find jobs that offer
         visa sponsorship.
       </Text>
       <Text fontSize={{ base: "md", md: "17px", lg: "lg" }}>
