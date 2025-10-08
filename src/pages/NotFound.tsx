@@ -3,7 +3,7 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 const NotFound = () => {
   return (
     <Flex justifyContent="center" alignItems="center" height="70vh">
-      <Box textAlign="center" color="blue.500">
+      <Box textAlign="center">
         <Text
           fontSize={{ base: "5xl", md: "7xl", lg: "7xl" }}
           fontWeight="medium"

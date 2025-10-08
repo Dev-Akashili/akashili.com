@@ -14,7 +14,7 @@ const Navbar = () => {
     >
       {isContactPage ? (
         <Link to={"/"} style={{ marginTop: "auto" }}>
-          <Button size={"sm"} variant={"ghost"} _hover={{ color: "blue.500" }}>
+          <Button size={"sm"} variant={"ghost"}>
             <MoveLeft />
           </Button>
         </Link>
@@ -25,7 +25,6 @@ const Navbar = () => {
         size={"sm"}
         mt={"auto"}
         variant={"ghost"}
-        _hover={{ color: "blue.500" }}
         onClick={toggleColorMode}
       >
         {colorMode === "light" ? <Sun size={"24px"} /> : <Moon size={"24px"} />}

@@ -15,7 +15,7 @@ const PageLink = ({ icon, text, link = "" }: PageLayoutProps) => {
       borderBottom={"1px"}
       href={link ?? ""}
       target={"_blank"}
-      _hover={{ color: "blue.500", cursor: "pointer", textDecoration: "none" }}
+      _hover={{ cursor: "pointer", textDecoration: "none", borderBottom: "none" }}
     >
       {icon}
       {text}

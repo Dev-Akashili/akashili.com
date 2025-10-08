@@ -98,9 +98,6 @@ const Contact = () => {
             color={colorMode === "dark" ? "black" : "white"}
             backgroundColor={colorMode === "dark" ? "white" : "black"}
             fontSize={{ base: "sm", lg: "md" }}
-            _hover={{
-              backgroundColor: "blue.500"
-            }}
             type="submit"
           >
             Submit
